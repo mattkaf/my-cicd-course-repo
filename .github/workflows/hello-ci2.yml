@@ -7,12 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
-hello:
-  runs-on: ubuntu-latest
+  hello:
+    runs-on: ubuntu-latest
   
-  steps:
-    - name: Check out repository
-      uses: actions/checkout@v4
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
     
-    - name: Say hello
-      run: echo "Hello from CI"
+      - name: Say hello
+        run: echo "Hello from CI"
