@@ -24,7 +24,7 @@
     #  - name: Run tests
    #     run: pytest
 
-name: Python CI
+name: Python Tests
 
 on:
   push:
