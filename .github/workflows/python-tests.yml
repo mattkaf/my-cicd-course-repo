@@ -23,7 +23,7 @@ jobs:
         run: pip install pytest
 
       - name: Run tests
-        run: pytest
+        run: python -m pytest
 
       - name: Generate build report
         run: python scripts/generate_report.py
