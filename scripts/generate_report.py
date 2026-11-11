@@ -19,6 +19,7 @@ def main():
         "- scripts/generate_report.py",
         "",
         "Status: Build artifact created successfully.",
+        "Course Wekk: Week 4",
     ]
     report_file.write_text("\n".join(report_contents), encoding="utf-8")
     print(f"Report written to {report_file}")
