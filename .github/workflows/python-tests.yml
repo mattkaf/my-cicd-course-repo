@@ -1,35 +1,35 @@
 name: Python Tests and Build Artifact
 
-on:
-  push:
-    branches: [ main, week-4-artifact ]
-  pull_request:
-    branches: [ main ]
+  on:
+    push:
+     branches: [ main, week-4-artifact ]
+    pull_request:
+     branches: [ main ]
 
-jobs:
-  test-and-build:
-    runs-on: ubuntu-latest
+  jobs:
+    test-and-build:
+      runs-on: ubuntu-latest
 
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      steps:
+        - name: Check out repository
+          uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+        - name: Set up Python
+         uses: actions/setup-python@v5
+         with:
+           python-version: '3.12'
 
-      - name: Install pytest
-        run: pip install pytest
+       - name: Install pytest
+          run: pip install pytest
 
-      - name: Run tests
-        run: python -m pytest
+        - name: Run tests
+          run: python -m pytest
 
-      - name: Generate build report
-        run: python scripts/generate_report.py
+       - name: Generate build report
+          run: python scripts/generate_report.py
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-report
-          path: build/build_report.txt
+       - name: Upload build artifact
+         uses: actions/upload-artifact@v4
+         with:
+            name: build-report
+            path: build/build_report.txt
