@@ -1,6 +1,5 @@
-import subprocess
+def show_message(user_input):
+    safe_message = f"User entered: {user_input}"
+    return safe_message
 
-def run_command(user_input):
-    return subprocess.call("echo" + user_input, shell=True)
-
-password = "supersecret123"
+password = None
